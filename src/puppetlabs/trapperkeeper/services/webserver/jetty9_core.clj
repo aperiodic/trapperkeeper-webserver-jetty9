@@ -655,7 +655,7 @@
   (let [webserver-context (create-webserver webserver-context config)]
     (log/info "Starting web server.")
     (try
-      (.start (:server webserver-context))
+      (.start ^Server (:server webserver-context))
       (catch Exception e
         (log/error
           e
